@@ -1,0 +1,77 @@
+@charset "UTF-8";
+
+@import "import/lib-fonts";
+@import "base";
+@import "import/typography";
+@import "import/reset-css";
+
+/* clearfix */
+.clearfix{
+	*zoom:1;
+	&:before, &:after{
+		content:'';
+		display:block;
+	}
+	&:after{
+		clear:both;
+	}
+}
+
+/* hidden */
+.hidden {
+    overflow: hidden;
+    border: 0;
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    clip: rect(1px, 1px, 1px, 1px);
+    clip-path: inset(50%);
+}
+
+
+
+
+
+
+/* media query */
+@media all and (min-width:1081px){
+    html{
+        font-size: 16px;
+    }
+}
+
+@media all and (max-width:1080px){
+    html{
+        font-size: 14px;
+    }
+}
+
+@media all and (max-width:768px){
+    html{
+        font-size: 13px;
+    }
+}
+
+@media all and (max-width:640px){
+    html{
+        font-size: 12px;
+    }
+}
+
+@media all and (max-width:480px){
+    html{
+        font-size: 10px;
+    }
+}
+
+@media all and (max-width:359px){
+    html{
+        font-size: 9px;
+    }
+}
+
+@media all and (max-width:320px){
+    html{
+        font-size: 8px;
+    }
+}
