@@ -21,8 +21,8 @@ const gulpSeo = require('gulp-seo');
 var paths = {
   build: "./dist/",
   scss: {
-    src: "./markup/assets/css/scss/**/*",
-    ignore: "!./markup/assets/css/scss/import",
+    src: "./markup/assets/css/**/*",
+    ignore: "!./markup/assets/css/import",
     dest: "./dist/assets/css"
   },
   csscopy: {
@@ -103,7 +103,7 @@ var sassOptions = {
 async function scss() {
   return src([paths.scss.src, paths.scss.ignore])
   .pipe(plumber())
-  .pipe(sourcemaps.init())
+  //.pipe(sourcemaps.init())
   .pipe(sass(sassOptions).on("error", sass.logError))
   .pipe(postcss([autoprefixer()]))
   .pipe(sourcemaps.write("./maps"))
